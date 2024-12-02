@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodRipa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+        .tab-content {
+            margin-top: 20px;
+        }
+        .tab-pane {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .tab-pane ul {
+            list-style-type: none;
+        }
+        .tab-pane ul li {
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">FoodRipa</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home">Головна</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="menu-tab" data-bs-toggle="tab" href="#menu">Меню</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="specials-tab" data-bs-toggle="tab" href="#specials">Спеціальні пропозиції</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="about-tab" data-bs-toggle="tab" href="#about">Про нас</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact">Контакти</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="orders-tab" data-bs-toggle="tab" href="#orders">Замовлення</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="container">
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="home">
+            <h3>Ласкаво просимо на сайт доставки їжі!</h3>
+            <p>На нашому сайті ви знайдете широкий вибір страв, які доставляються прямо до вашого дому. Ви можете замовити смачні страви будь-якої кухні, і ми доставимо їх вам у найкоротший термін.</p>
+        </div>
+        <div class="tab-pane fade" id="menu">
+            <h3>Наше меню</h3>
+            <p>У нашому меню ви знайдете різноманітні страви: піци, пасти, суші, салати, десерти та багато іншого!</p>
+            <ul>
+                <li>Піца "Маргарита" - 120 грн</li>
+                <li>Паста "Карбонара" - 150 грн</li>
+                <li>Суші "Філадельфія" - 180 грн</li>
+                <li>Салат "Цезар" - 100 грн</li>
+                <li>Десерт "Тірамісу" - 80 грн</li>
+            </ul>
+        </div>
+        <div class="tab-pane fade" id="specials">
+            <h3>Спеціальні пропозиції</h3>
+            <p>Не пропустіть наші акції та спеціальні пропозиції! Ми регулярно оновлюємо пропозиції для наших клієнтів.</p>
+            <ul>
+                <li>Замовляй 2 піци - отримай 1 в подарунок!</li>
+                <li>Знижка 10% на перше замовлення для нових клієнтів!</li>
+                <li>Акція "Суші-сет" - за половину ціни при замовленні двох сетів!</li>
+            </ul>
+        </div>
+        <div class="tab-pane fade" id="about">
+            <h3>Про нас</h3>
+            <p>Ми — компанія, яка пропонує смачну та швидку доставку їжі по місту. Всі наші страви готуються з найкращих інгредієнтів і доставляються гарячими. Наші кур'єри працюють швидко, щоб ваш обід чи вечеря завжди були на час!</p>
+        </div>
+        <div class="tab-pane fade" id="contact">
+            <h3>Контакти</h3>
+            <p>Зв'яжіться з нами для отримання додаткової інформації або для замовлення їжі:</p>
+            <ul>
+                <li>Email: info@fooddelivery.com</li>
+                <li>Телефон: +380123456789</li>
+                <li>Адреса: вул. Примірна, 1, Київ</li>
+            </ul>
+        </div>
+        <div class="tab-pane fade" id="orders">
+            <h3>Мої замовлення</h3>
+            <p>Перегляньте історію ваших замовлень і стежте за статусом ваших поточних замовлень.</p>
+            <ul>
+                <li>Замовлення #1: Піца "Маргарита" - Статус: в обробці</li>
+                <li>Замовлення #2: Суші "Філадельфія" - Статус: доставлено</li>
+                <li>Замовлення #3: Паста "Карбонара" - Статус: в обробці</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+
+    const tabs = document.querySelectorAll('.nav-link');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function(event) {
+            event.preventDefault();
+            
+
+            tabs.forEach(item => item.classList.remove('active'));
+            
+
+            tab.classList.add('active');
+            
+
+            const target = document.querySelector(tab.getAttribute('href'));
+            const panes = document.querySelectorAll('.tab-pane');
+            panes.forEach(pane => pane.classList.remove('show', 'active'));
+            target.classList.add('show', 'active');
+        });
+    });
+</script>
+
+</body>
+</html>

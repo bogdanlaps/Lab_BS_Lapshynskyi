@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Лапшинський Богдан</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+<form action="">
+  <div class="anim">
+    <div>
+      <div>
+        <h1 style="text-align: center;">Практична робота №6</h1>
+        <hr>
+        <h3 style="text-align: center;">Внесення даних про освітню компонентну ОП до ІС "Компоненти ОП"</h3>
+      </div>
+      <div class="hover" style="border: 1px solid white; width: 800px; padding: 10px; text-align: center; margin: 0 0 0 270px; border-radius: 10px; background-color: white; color: black;">
+        Освітня програма*
+        <select required>
+          <option value="">Виберіть освітню програму</option>
+          <option value="">051 Економіка </option>
+          <option value="">071 Облік і оподаткування </option>
+          <option value="">122 Комп'ютерні науки </option>
+          <option value="">205 Лісове господарство </option>
+          <option value="">242 Туризм </option>
+        </select>
+      </div>
+      <div style="display: flex; padding-top: 20px; margin: 0 0 0 400px;">
+        <div class="hover" style="position: relative; padding: 5px; border: 1px solid white; width: 280px; height: 50px; background-color: white; color: black; border-radius: 10px;">
+          <u class="border">Освітній ступень</u><br>
+          <div style="padding-left: 30px;">
+            <input type="radio" name="1">Бакалавр
+            <input type="radio" name="1">Магістр
+          </div>
+        </div>
+        <div class="hover" style="position: relative; padding: 5px; left: 30px; border: 1px solid white; width: 280px; height: 50px; background-color: white; color: black; border-radius: 10px;">
+          <u class="border">Термін навчання</u><br>
+          <div style="padding-left: 30px;">
+            <input type="radio" name="2">Скорочений
+            <input type="radio" name="2">Повний
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; margin: 0 0 0 300px;">
+        <div class="hover" style="position: relative; top: 40px; padding: 5px; left: 30px; border: 1px solid white; width: 450px; height: 50px; background-color: white; color: black; border-radius: 10px;">
+          <u class="border">Тип документа ОК</u>
+          <div style="padding-left: 30px;">
+            <input type="radio" name="3">Анотація
+            <input type="radio" name="3">Силабус
+            <input type="radio" name="3">Робоча програма
+          </div>
+        </div>
+        <div class="hover" style="position: relative; top: 40px; padding: 5px; left: 60px; border: 1px solid white; width: 200px; height: 50px; background-color: white; color: black; border-radius: 10px;">
+          <div style="text-align: center; padding-top: 15px; position: relative;">
+            <span>Рік ОП</span>
+            <select>
+              <option value="">Виберіть рік ОП</option>
+              <option value="">2018</option>
+              <option value="">2019</option>
+              <option value="">2020</option>
+              <option value="">2021</option>
+              <option value="">2022</option>
+              <option value="">2023</option>
+              <option value="">2024</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div style="padding-top: 50px;">
+        <div style="position: relative; top: 40px; padding: 5px;border: 1px solid white;height: 42px; text-align: right; padding-top: 10px;">
+          <input type="submit" value="Пошук">
+          <input type="reset" value="Очистити форму">
+        </div>
+      </div>
+      <p style="padding-top: 40px;"></p>
+      <hr>
+    </div>
+    <div>
+      <h1 align="center">Створення нового обговорення</h1>
+      <div>
+        <p style="padding-left: 100px;">Назва проекту*</p>
+        <input style="margin-left: 130px;" type="text" placeholder="Проект" required maxlength="100">
+        <div style="display: flex; padding-top: 20px; margin: 0 0 0 370px;">
+          <div class="hover" style="position: relative; padding: 5px; left: 30px; border: 1px solid white; width: 280px; height: 50px; background-color: white; color: black; border-radius: 10px;">
+            <u class="border">Дата створення обговорення*</u><br>
+            <div style="text-align: center;">
+              <input type="date" required>
+            </div>
+          </div>
+          <div class="hover" style="position: relative; padding: 5px; left: 60px; border: 1px solid white; width: 280px; height: 50px; background-color: white; color: black; border-radius: 10px;">
+            <u class="border">Завершення обговорення*</u><br>
+            <div style="text-align: center;">
+              <input type="date" required>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="padding-left: 100px;">
+        <p>Файл проекту<i> (Тільки файли PDF)</i></p>
+        <div style="position: relative; padding: 30px; left: 60px; border: 1px solid white; width: 225px; height: 20px;border-radius: 10px;">
+            <input type="file" multiple accept="application/pdf">
+        </div>
+      </div>
+      <div><br>
+        <b style="padding-left: 100px;">Ініціатор обговорення</b><br>
+        <div style="display: flex;"><br>
+          <input style="margin: 0 0 0 500px;" name="6" type="radio">Адміністрація інституту
+          <input style="margin: 0 0 0 50px;" name="6" type="radio">Виховний відділ
+          <input style="margin: 0 0 0 59px;" name="6" type="radio">Факультет ЕЕТ
+        </div>
+        <div><br>
+          <input style="margin: 0 0 0 500px;" name="6" type="radio">Навчальний відділ
+          <input style="margin: 0 0 0 81px;" name="6" type="radio">Вчений секретар
+          <input style="margin: 0 0 0 50px;" name="6" type="radio">Факультет ЕП
+        </div>
+        <div><br>
+          <input style="margin: 0 0 0 928px;" name="6" type="radio">Факультет AI
+        </div>
+      </div>
+      <div style="padding-top: 50px;">
+        <div style="position: relative; top: 40px; padding: 5px;height: 42px; text-align: right; padding-top: 10px;">
+          <input type="submit" value="Додати проект до обговорення">
+          <input type="reset" value="Очистити форму">
+        </div>
+      </div>
+    </div>
+    <p style="padding-top: 20px;"></p>
+    <hr><br>
+  </div>
+</form>
+</body>
+</html>

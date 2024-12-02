@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Preferences</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .contact-box {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(to right, #ffffff, #f8f9fa);
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-box input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .contact-box label {
+            flex: 0 0 80px;
+        }
+
+        .contact-box input[type="text"] {
+            flex: 1;
+            padding: 5px;
+            border: 1px solid #ced4da;
+            border-radius: 3px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="contact-box">
+            <input type="checkbox" id="viber">
+            <label for="viber">Viber</label>
+            <input type="text" placeholder="your account">
+        </div>
+
+        <div class="contact-box">
+            <input type="checkbox" id="telegram">
+            <label for="telegram">Telegram</label>
+            <input type="text" placeholder="your account">
+        </div>
+
+        <div class="contact-box">
+            <input type="checkbox" id="whatsapp">
+            <label for="whatsapp">Whatsapp</label>
+            <input type="text" placeholder="your account">
+        </div>
+    </div>
+</body>
+</html>

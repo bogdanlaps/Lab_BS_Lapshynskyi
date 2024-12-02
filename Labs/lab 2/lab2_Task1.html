@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Піраміди</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            height: 100vh;
+        }
+        .left-column {
+            width: 30%; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; 
+            padding: 10px;
+        }
+        .right-column {
+            width: 70%; 
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        .small-img {
+            height: 30%; 
+            object-fit: cover; 
+        }
+        .large-img {
+            flex-grow: 1; 
+            object-fit: cover; 
+            width: 100%; 
+        }
+    </style>
+</head>
+<body>
+    <div class="left-column">
+        <img src="images (1).jpg" alt="Картинка 1" class="small-img">
+        <img src="images.jpg" alt="Картинка 2" class="small-img">
+        <img src="5f8b3cdf5e27e-screenshot-6_1200.webp" alt="Картинка 3" class="small-img">
+    </div>
+    <div class="right-column">
+        <img src="243036.jpg" alt="Картинка 4" class="large-img">
+    </div>
+</body>
+</html>

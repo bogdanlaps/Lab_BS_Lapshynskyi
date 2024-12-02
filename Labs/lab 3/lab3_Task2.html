@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table #1. Country of Western Europe - Striped Tables</title>
+    <style>
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .table th, .table td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        .table th {
+            background-color: #333; 
+            color: white; 
+        }
+
+       
+        .table-striped tbody tr:nth-child(odd) {
+            background-color: #e0f7fa; 
+        }
+
+       
+        .table-striped-columns th:nth-child(odd), .table-striped-columns td:nth-child(odd) {
+            background-color: #ffe0b2; 
+        }
+
+        
+        .table-striped-both tbody tr:nth-child(odd) {
+            background-color: #e0f7fa; 
+        }
+        .table-striped-both th:nth-child(odd), .table-striped-both td:nth-child(odd) {
+            background-color: #ffe0b2; 
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="header">Table #1. Country of Western Europe</h1>
+    
+    
+    <h2>Таблиця зі смугастими рядками</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Surface Area</th>
+                <th>Indep Year</th>
+                <th>Population</th>
+                <th>Government Form</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>AUT</td>
+                <td>Austria</td>
+                <td>83859</td>
+                <td>1918</td>
+                <td>8091800</td>
+                <td>Federal Republic</td>
+            </tr>
+            <tr>
+                <td>BEL</td>
+                <td>Belgium</td>
+                <td>30518</td>
+                <td>1830</td>
+                <td>10239000</td>
+                <td>Constitutional Monarchy, Federation</td>
+            </tr>
+            <tr>
+                <td>FRA</td>
+                <td>France</td>
+                <td>551500</td>
+                <td>843</td>
+                <td>59225700</td>
+                <td>Republic</td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+    <h2>Таблиця зі смугастими колонками</h2>
+    <table class="table table-striped-columns">
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Surface Area</th>
+                <th>Indep Year</th>
+                <th>Population</th>
+                <th>Government Form</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>AUT</td>
+                <td>Austria</td>
+                <td>83859</td>
+                <td>1918</td>
+                <td>8091800</td>
+                <td>Federal Republic</td>
+            </tr>
+            <tr>
+                <td>BEL</td>
+                <td>Belgium</td>
+                <td>30518</td>
+                <td>1830</td>
+                <td>10239000</td>
+                <td>Constitutional Monarchy, Federation</td>
+            </tr>
+            <tr>
+                <td>FRA</td>
+                <td>France</td>
+                <td>551500</td>
+                <td>843</td>
+                <td>59225700</td>
+                <td>Republic</td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+    <h2>Таблиця зі смугастими рядками та колонками</h2>
+    <table class="table table-striped-both">
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Surface Area</th>
+                <th>Indep Year</th>
+                <th>Population</th>
+                <th>Government Form</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>AUT</td>
+                <td>Austria</td>
+                <td>83859</td>
+                <td>1918</td>
+                <td>8091800</td>
+                <td>Federal Republic</td>
+            </tr>
+            <tr>
+                <td>BEL</td>
+                <td>Belgium</td>
+                <td>30518</td>
+                <td>1830</td>
+                <td>10239000</td>
+                <td>Constitutional Monarchy, Federation</td>
+            </tr>
+            <tr>
+                <td>FRA</td>
+                <td>France</td>
+                <td>551500</td>
+                <td>843</td>
+                <td>59225700</td>
+                <td>Republic</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

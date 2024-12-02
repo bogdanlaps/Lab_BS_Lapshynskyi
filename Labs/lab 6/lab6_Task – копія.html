@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Внесення даних про освітню компоненту</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: linear-gradient(to right, #e3f2fd, #bbdefb);
+        }
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 1rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        h2 {
+            color: #1e88e5;
+        }
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+        }
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 20px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #2196F3;
+        }
+        input:checked + .slider:before {
+            transform: translateX(20px);
+        }
+        .error {
+            color: red;
+            font-size: 0.875rem;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto p-8">
+        <div class="form-container p-6 rounded-lg">
+            <h2 class="text-3xl font-bold mb-6 text-center">Внесення даних про освітню компоненту ОПП</h2>
+            <form id="myForm" novalidate>
+                <div class="mb-5">
+                    <label class="block font-bold mb-2" for="form">Освітня програма</label>
+                    <select class="form-select block w-full p-2 border rounded" id="form" required>
+                        <option selected disabled value="">Оберіть освітню програму</option>
+                        <option value="1">Економіка підприємства</option>
+                        <option value="2">Облік і аудит</option>
+                        <option value="3">Менеджмент</option>
+                        <option value="4">Екологія</option>
+                        <option value="5">Комп'ютерні науки</option>
+                        <option value="6">Електроенергетика, електротехніка та електромеханіка</option>
+                        <option value="7">Агрономія</option>
+                        <option value="8">Лісове господарство</option>
+                        <option value="9">Садово-паркове господарство</option>
+                        <option value="10">Агроінженерія</option>
+                        <option value="11">Туризм</option>
+                    </select>
+                    <div class="error" id="feedback">Будь ласка, оберіть освітню програму.</div>
+                </div>
+
+                <div class="mb-5">
+                  <label class="block font-bold mb-2">Освітній ступінь</label>
+                  <div class="flex items-center mb-2">
+                      <label class="switch mr-4">
+                          <input type="checkbox" id="bachelor">
+                          <span class="slider"></span>
+                      </label>
+                      <span>Бакалавр</span>
+                  </div>
+                  <div class="flex items-center mb-2">
+                      <label class="switch mr-4">
+                          <input type="checkbox" id="master">
+                          <span class="slider"></span>
+                      </label>
+                      <span>Магістр</span>
+                  </div>
+                  <div class="error" id="degreeFeedback">Будь ласка, оберіть освітній ступінь.</div>
+              </div>
+
+                <div class="mb-5">
+                    <label class="block font-bold mb-2">Термін навчання</label>
+                    <div class="flex items-center mb-2">
+                        <input type="radio" name="flexRadioDefault" id="flexRadioDefault1" required>
+                        <label class="ml-2" for="flexRadioDefault1">Скорочений</label>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <input type="radio" name="flexRadioDefault" id="flexRadioDefault2" required>
+                        <label class="ml-2" for="flexRadioDefault2">Повний</label>
+                    </div>
+                    <div class="error" id="termFeedback">Будь ласка, оберіть термін навчання.</div>
+                </div>
+
+                <div class="mb-5">
+                    <label class="block font-bold mb-2">Вид ОК</label>
+                    <div class="flex items-center mb-2">
+                        <input type="radio" name="flexDefault" id="flexDefault3" required>
+                        <label class="ml-2" for="flexDefault3">Обов'язкова компонента (ОК)</label>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <input type="radio" name="flexDefault" id="flexDefault4" required>
+                        <label class="ml-2" for="flexDefault4">Обов'язкова компонента за вибором інституту (ОКІ)</label>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <input type="radio" name="flexDefault" id="flexDefault5" required>
+                        <label class="ml-2" for="flexDefault5">Вибіркова фахова компонента (ВК)</label>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <input type="radio" name="flexDefault" id="flexDefault6" required>
+                        <label class="ml-2" for="flexDefault6">Вибіркова компонента за уподобання здобувача (ВКУ)</label>
+                    </div>
+                    <div class="error" id="typeFeedback">Будь ласка, оберіть вид ОК.</div>
+                </div>
+
+                <div class="mb-5">
+                    <label class="block font-bold mb-2">Номер ОК за ООП</label>
+                    <input type="text" class="form-input block w-full p-2 border rounded" id="Input1" placeholder="01..09 або 10, 11" required>
+                    <div class="error" id="okNumberFeedback">Будь ласка, введіть номер ОК за ООП.</div>
+                </div>
+                <div class="mb-5">
+                    <label class="block font-bold mb-2">Номер з блоку інакше 0</label>
+                    <input type="number" class="form-input block w-full p-2 border rounded" id="num" value="0" required>
+                    <div class="error" id="blockNumberFeedback">Будь ласка, введіть номер з блоку.</div>
+                </div>
+                <div class="mb-5">
+                    <label class="block font-bold mb-2">Номер ОК у відповідності до ООП</label>
+                    <input type="text" class="form-input block w-full p-2 border rounded" id="Input2" placeholder="Назва ОК..." required>
+                    <div class="error" id="okNameFeedback">Будь ласка, введіть номер ОК у відповідності до ООП.</div>
+                </div>
+                <div class="mb-5">
+                    <label class="block font-bold mb-2">Дата затвердження ОК</label>
+                    <input type="date" class="form-input block w-full p-2 border rounded" id="date" required>
+                    <div class="error" id="dateFeedback">Будь ласка, виберіть дату затвердження.</div>
+                </div>
+
+                <fieldset class="border rounded-lg p-4 mb-5">
+                    <legend class="font-bold">Семестр вивчення ОК</legend>
+                    <div class="flex flex-wrap">
+                        <div class="flex items-center mr-4 mb-2">
+                            <input type="checkbox" class="form-checkbox" id="inlineCheckbox1" value="sem. 1">
+                            <label class="ml-2" for="inlineCheckbox1">1 сем.</label>
+                        </div>
+                        <div class="flex items-center mr-4 mb-2">
+                            <input type="checkbox" class="form-checkbox" id="inlineCheckbox2" value="sem. 2">
+                            <label class="ml-2" for="inlineCheckbox2">2 сем.</label>
+                        </div>
+                        <div class="flex items-center mr-4 mb-2">
+                            <input type="checkbox" class="form-checkbox" id="inlineCheckbox3" value="sem. 3">
+                            <label class="ml-2" for="inlineCheckbox3">3 сем.</label>
+                        </div>
+                        <div class="flex items-center mr-4 mb-2">
+                            <input type="checkbox" class="form-checkbox" id="inlineCheckbox4" value="sem. 4">
+                            <label class="ml-2" for="inlineCheckbox4">4 сем.</label>
+                        </div>
+                        <div class="flex items-center mr-4 mb-2">
+                            <input type="checkbox" class="form-checkbox" id="inlineCheckbox5" value="sem. 5">
+                            <label class="ml-2" for="inlineCheckbox5">5 сем.</label>
+                        </div>
+                        <div class="flex items-center mr-4 mb-2">
+                            <input type="checkbox" class="form-checkbox" id="inlineCheckbox6" value="sem. 6">
+                            <label class="ml-2" for="inlineCheckbox6">6 сем.</label>
+                        </div>
+                        <div class="flex items-center mr-4 mb-2">
+                            <input type="checkbox" class="form-checkbox" id="inlineCheckbox7" value="sem. 7">
+                            <label class="ml-2" for="inlineCheckbox7">7 сем.</label>
+                        </div>
+                        <div class="flex items-center mb-2">
+                            <input type="checkbox" class="form-checkbox" id="inlineCheckbox8" value="sem. 8">
+                            <label class="ml-2" for="inlineCheckbox8">8 сем.</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Надіслати</button>
+                <button type="reset" class="bg-gray-300 text-gray-700 py-2 px-4 rounded hover:bg-gray-400 ml-2">Очистити</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    let isValid = true;
+
+    // Перевірка вибору освітньої програми
+    const formSelect = document.getElementById('form');
+    const feedback = document.getElementById('feedback');
+    if (!formSelect.value) {
+        feedback.style.display = 'block';
+        isValid = false;
+    } else {
+        feedback.style.display = 'none';
+    }
+
+    // Перевірка терміну навчання
+    const termRadio1 = document.getElementById('flexRadioDefault1');
+    const termRadio2 = document.getElementById('flexRadioDefault2');
+    const termFeedback = document.getElementById('termFeedback');
+    if (!termRadio1.checked && !termRadio2.checked) {
+        termFeedback.style.display = 'block';
+        isValid = false;
+    } else {
+        termFeedback.style.display = 'none';
+    }
+
+    // Перевірка виду ОК
+    const typeRadio3 = document.getElementById('flexDefault3');
+    const typeRadio4 = document.getElementById('flexDefault4');
+    const typeRadio5 = document.getElementById('flexDefault5');
+    const typeRadio6 = document.getElementById('flexDefault6');
+    const typeFeedback = document.getElementById('typeFeedback');
+    if (!typeRadio3.checked && !typeRadio4.checked && !typeRadio5.checked && !typeRadio6.checked) {
+        typeFeedback.style.display = 'block';
+        isValid = false;
+    } else {
+        typeFeedback.style.display = 'none';
+    }
+
+    // Перевірка освітнього ступеня
+    const bachelorCheckbox = document.getElementById('bachelor');
+    const masterCheckbox = document.getElementById('master');
+    const degreeFeedback = document.getElementById('degreeFeedback');
+    if (!bachelorCheckbox.checked && !masterCheckbox.checked) {
+        degreeFeedback.style.display = 'block';
+        isValid = false;
+    } else {
+        degreeFeedback.style.display = 'none';
+    }
+
+    // Перевірка номерів
+    const input1 = document.getElementById('Input1');
+    const okNumberFeedback = document.getElementById('okNumberFeedback');
+    if (!input1.value.trim()) {
+        okNumberFeedback.style.display = 'block';
+        isValid = false;
+    } else {
+        okNumberFeedback.style.display = 'none';
+    }
+
+    const blockNumber = document.getElementById('num');
+    const blockNumberFeedback = document.getElementById('blockNumberFeedback');
+    if (blockNumber.value < 0) {
+        blockNumberFeedback.style.display = 'block';
+        isValid = false;
+    } else {
+        blockNumberFeedback.style.display = 'none';
+    }
+
+    const input2 = document.getElementById('Input2');
+    const okNameFeedback = document.getElementById('okNameFeedback');
+    if (!input2.value.trim()) {
+        okNameFeedback.style.display = 'block';
+        isValid = false;
+    } else {
+        okNameFeedback.style.display = 'none';
+    }
+
+    const dateInput = document.getElementById('date');
+    const dateFeedback = document.getElementById('dateFeedback');
+    if (!dateInput.value) {
+        dateFeedback.style.display = 'block';
+        isValid = false;
+    } else {
+        dateFeedback.style.display = 'none';
+    }
+
+    if (isValid) {
+        alert("Форма успішно надіслана!");
+    }
+}, false);
+
+    </script>
+</body>
+</html>

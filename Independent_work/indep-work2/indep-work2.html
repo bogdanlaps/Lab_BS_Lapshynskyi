@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вертикальне меню</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .menu {
+            width: 250px;
+        }
+
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu > ul > li {
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            margin-bottom: 2px;
+            position: relative;
+        }
+
+        .menu > ul > li > a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .menu > ul > li > a:hover {
+            background-color: #e6e6e6;
+        }
+
+        .submenu {
+            display: none;
+            position: relative;
+            background-color: #fff;
+            border: 1px solid #ccc;
+        }
+
+        .submenu li {
+            position: relative;
+        }
+
+        .submenu li a {
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+            color: black;
+        }
+
+        .submenu li a:hover {
+            background-color: #e6e6e6;
+        }
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href="#">ІНСТИТУТ</a>
+                <ul class="submenu">
+                    <li><a href="#">Історія становлення</a></li>
+                    <li><a href="#">Герої Небесної Сотні</a></li>
+                    <li><a href="#">Пам'ять про Героїв</a></li>
+                    <li><a href="#">Фотогалерея</a></li>
+                    <li><a href="#">Символіка інституту</a></li>
+                    <li><a href="#">Публічна інформація</a></li>
+                    <li><a href="#">Програма розвитку</a></li>
+                    <li><a href="#">Матеріально-технічна база</a></li>
+                    <li><a href="#">Кадровий склад</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Діяльність</a>
+                <ul class="submenu">
+                    <li>
+                        <a href="#">Документи</a>
+                        <ul class="submenu">
+                            <li><a href="#">Обговорення проектів</a></li>
+                            <li><a href="#">Законодавча основа</a></li>
+                            <li><a href="#">Нормативні документи</a></li>
+                            <li>
+                                <a href="#">Звіт за</a>
+                                <ul class="submenu">
+                                    <li><a href="#">2017 рік</a></li>
+                                    <li><a href="#">2018 рік</a></li>
+                                    <li><a href="#">2019 рік</a></li>
+                                    <li><a href="#">2020 рік</a></li>
+                                    <li><a href="#">2021 рік</a></li>
+                                    <li><a href="#">2022 рік</a></li>
+                                    <li><a href="#">2023 рік</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Освітня діяльність</a></li>
+                    <li><a href="#">Фінансово-економічна</a></li>
+                    <li><a href="#">Міжнародна діяльність</a></li>
+                    <li><a href="#">Наукова діяльність</a></li>
+                    <li><a href="#">Культурно-виховна робота</a></li>
+                </ul>
+            </li>
+            <li><a href="#">ВСТУП 2024</a></li>
+            <li><a href="#">Студентство</a></li>
+            <li><a href="#">Дописи</a></li>
+        </ul>
+    </nav>
+    <script>
+        document.querySelectorAll('.menu > ul > li, .submenu > li').forEach(menuItem => {
+            menuItem.addEventListener('click', function (e) {
+                e.stopPropagation();
+                const submenu = menuItem.querySelector('.submenu');
+                if (submenu) {
+                    submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

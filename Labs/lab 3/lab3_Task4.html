@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table #1. Country of Western Europe - Responsive Table</title>
+    <style>
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .table th, .table td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        .table th {
+            background-color: #333; /* Темний фон для заголовків */
+            color: white; /* Білий текст для заголовків */
+        }
+        /* Підсвітка рядків при наведенні */
+        .table-hover tbody tr:hover {
+            background-color: #ffcc00; /* Яскраво-жовтий фон при наведенні */
+            color: black; /* Чорний текст при наведенні */
+        }
+        /* Обрамлення комірок */
+        .table-bordered th, .table-bordered td {
+            border: 2px solid #000; /* Товсті обрамлення */
+        }
+        /* Стилі для прокручування */
+        .table-responsive {
+            overflow-x: auto; /* Дозволити горизонтальне прокручування */
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="header">Table #1. Country of Western Europe</h1>
+
+    <!-- Прокручувана таблиця -->
+    <div class="table-responsive-md">
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Name</th>
+                    <th>Surface Area</th>
+                    <th>Indep Year</th>
+                    <th>Population</th>
+                    <th>Government Form</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>AUT</td>
+                    <td>Austria</td>
+                    <td>83859</td>
+                    <td>1918</td>
+                    <td>8091800</td>
+                    <td>Federal Republic</td>
+                </tr>
+                <tr>
+                    <td>BEL</td>
+                    <td>Belgium</td>
+                    <td>30518</td>
+                    <td>1830</td>
+                    <td>10239000</td>
+                    <td>Constitutional Monarchy, Federation</td>
+                </tr>
+                <tr>
+                    <td>FRA</td>
+                    <td>France</td>
+                    <td>551500</td>
+                    <td>843</td>
+                    <td>59225700</td>
+                    <td>Republic</td>
+                </tr>
+                <tr>
+                    <td>DEU</td>
+                    <td>Germany</td>
+                    <td>357022</td>
+                    <td>1955</td>
+                    <td>82164700</td>
+                    <td>Federal Republic</td>
+                </tr>
+                <tr>
+                    <td>LIE</td>
+                    <td>Liechtenstein</td>
+                    <td>160</td>
+                    <td>1806</td>
+                    <td>32300</td>
+                    <td>Constitutional Monarchy</td>
+                </tr>
+                <tr>
+                    <td>LUX</td>
+                    <td>Luxembourg</td>
+                    <td>2586</td>
+                    <td>1867</td>
+                    <td>435700</td>
+                    <td>Constitutional Monarchy</td>
+                </tr>
+                <tr>
+                    <td>MCO</td>
+                    <td>Monaco</td>
+                    <td>1.5</td>
+                    <td>1861</td>
+                    <td>34000</td>
+                    <td>Constitutional Monarchy</td>
+                </tr>
+                <tr>
+                    <td>NLD</td>
+                    <td>Netherlands</td>
+                    <td>41526</td>
+                    <td>1581</td>
+                    <td>15864000</td>
+                    <td>Constitutional Monarchy</td>
+                </tr>
+                <tr>
+                    <td>CHE</td>
+                    <td>Switzerland</td>
+                    <td>41284</td>
+                    <td>1499</td>
+                    <td>7160400</td>
+                    <td>Federation</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

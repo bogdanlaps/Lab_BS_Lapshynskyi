@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Замовлення продукції</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fdf5e6;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #444;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+            gap: 20px;
+        }
+        .product-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 250px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .product-card img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .product-card h3 {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+        }
+        .product-card p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .product-card input {
+            width: 50px;
+            padding: 5px;
+            margin-right: 10px;
+        }
+        .product-card .status {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>ЗАМОВЛЕННЯ ПРОДУКЦІЇ</h1>
+<div style="padding: 20px;">
+    <h2>ЧАЇ</h2>
+    <div class="products">
+        <div class="product-card">
+            <img src="https://chaipotutory.com.ua/images/foto/tea1.jpg" alt="Ранок срібносіянний">
+            <h3>Ранок срібносіянний</h3>
+            <p><strong>Склад:</strong> меліса, м’ята, аніс, фенхель</p>
+            <p><strong>Маса:</strong> 30г</p>
+            <p><strong>Ціна:</strong> 87,00 грн.</p>
+            <p><strong>Статус:</strong> <span class="status">є у наявності</span></p>
+            <label>Кількість, шт.:</label>
+            <input type="number" min="1">
+        </div>
+        <div class="product-card">
+            <img src="https://chaipotutory.com.ua/images/foto/tea2.jpg" alt="Ранок срібносіянний">
+            <h3>Вечір золотий</h3>
+            <p><strong>Склад:</strong> меліса*, маренка запашна*, м'ята*, ромашка*, первоцвіт*, волошка*, троянда*, мальва*</p>
+            <p><strong>Маса:</strong> 30г</p>
+            <p><strong>Ціна:</strong> 88,00 грн.</p>
+            <p><strong>Статус:</strong> <span class="status">є у наявності</span></p>
+            <label>Кількість, шт.:</label>
+            <input type="number" min="1">
+        </div>
+        <div class="product-card">
+            <img src="https://chaipotutory.com.ua/images/foto/tea3.jpg" alt="Ранок срібносіянний">
+            <h3>Квітка</h3>
+            <p><strong>Склад:</strong> трава лимонна, липа*,  каркаде, календула*, первоцвіт*, вербена*, котовник*, листя смородини*, бузина*, соняшник*, волошка*, мальва*, троянда*</p>
+            <p><strong>Маса:</strong> 45г</p>
+            <p><strong>Ціна:</strong> 96,00 грн.</p>
+            <p><strong>Статус:</strong> <span class="status">є у наявності</span></p>
+            <label>Кількість, шт.:</label>
+            <input type="number" min="1">
+        </div>
+        <div class="product-card">
+            <img src="https://chaipotutory.com.ua/images/foto/tea4.jpg" alt="Ранок срібносіянний">
+            <h3>Зимові візерунки</h3>
+            <p><strong>Склад:</strong> бузина*, липа*, первоцвіт*, мальва*, базилік лимонний*, бруньки модрини*, чебрець*, звіробій*, шавлія*, мати й мачуха*</p>
+            <p><strong>Маса:</strong> 42г</p>
+            <p><strong>Ціна:</strong> 96,00 грн.</p>
+            <p><strong>Статус:</strong> <span class="status">є у наявності</span></p>
+            <label>Кількість, шт.:</label>
+            <input type="number" min="1">
+        </div>
+        <!-- Інші продукти чаю додати тут -->
+    </div>
+</div>
+<div style="padding: 20px;">
+    <h2>СПЕЦІЇ</h2>
+    <div class="products">
+        <div class="product-card">
+            <img src="https://chaipotutory.com.ua/images/foto/sp1.jpg" alt="Сіль з травами">
+            <h3>Сіль з травами, баночка</h3>
+            <p><strong>Склад:</strong> базилік, кріп, шнітт, помідори, цибуля, петрушка, морква, календула, волошки, кропива, любисток            </p>
+            <p><strong>Маса:</strong> 90г</p>
+            <p><strong>Ціна:</strong> 93,00 грн.</p>
+            <p><strong>Статус:</strong> <span class="status">є у наявності</span></p>
+            <label>Кількість, шт.:</label>
+            <input type="number" min="1">
+        </div>
+        <div class="product-card">
+            <img src="https://chaipotutory.com.ua/images/foto/sp1.jpg" alt="Сіль з травами">
+            <h3>Сіль з травами, пакет</h3>
+            <p><strong>Склад:</strong> базилік, кріп, шнітт, помідори, цибуля, петрушка, морква, календула, волошки, кропива, любисток            </p>
+            <p><strong>Маса:</strong> 90г</p>
+            <p><strong>Ціна:</strong> 52,00 грн.</p>
+            <p><strong>Статус:</strong> <span class="status">є у наявності</span></p>
+            <label>Кількість, шт.:</label>
+            <input type="number" min="1">
+        </div>
+        <div class="product-card">
+            <img src="https://chaipotutory.com.ua/images/foto/sp3.jpg" alt="Сіль з травами">
+            <h3>Сіль з травами, великий пакет</h3>
+            <p><strong>Склад:</strong> базилік, кріп, шнітт, помідори, цибуля, петрушка, морква, календула, волошки, кропива, любисток            </p>
+            <p><strong>Маса:</strong> 300</p>
+            <p><strong>Ціна:</strong> 93,00 грн.</p>
+            <p><strong>Статус:</strong> <span class="status">є у наявності</span></p>
+            <label>Кількість, шт.:</label>
+            <input type="number" min="1">
+        </div>
+        <div class="product-card">
+            <img src="https://chaipotutory.com.ua/images/foto/sp4.jpg" alt="Сіль з травами">
+            <h3>Трави салатні, баночка</h3>
+            <p><strong>Склад:</strong> базилік, кріп, шнітт, помідори, цибуля, петрушка, морква, календула, волошки, кропива, любисток            </p>
+            <p><strong>Маса:</strong> 15</p>
+            <p><strong>Ціна:</strong> 93,00 грн.</p>
+            <p><strong>Статус:</strong> <span class="status">є у наявності</span></p>
+            <label>Кількість, шт.:</label>
+            <input type="number" min="1">
+        </div>
+        <!-- Інші продукти спецій додати тут -->
+    </div>
+</div>
+<div style="padding: 20px;">
+    <h2>ПООДИНОКІ ТРАВИ</h2>
+    <div class="products">
+        <div class="product-card">
+            <img src="https://chaipotutory.com.ua/images/Product/%D0%9F%D0%B5%D1%82%D1%80%D1%83%D1%88%D0%BA%D0%B0.jpg" alt="Сіль з травами">
+            <h3>Пертушка</h3>
+            <p><strong>Маса:</strong> 12</p>
+            <p><strong>Ціна:</strong> 33,00 грн.</p>
+            <p><strong>Статус:</strong> <span class="status">є у наявності</span></p>
+            <label>Кількість, шт.:</label>
+            <input type="number" min="1">
+        </div>
+        <div class="product-card">
+            <img src="https://chaipotutory.com.ua/images/Product/%D0%91%D0%B0%D0%B7%D0%B8%D0%BB%D1%96%D0%BA.jpg" alt="Сіль з травами">
+            <h3>Базилік*</h3>
+            <p><strong>Маса:</strong> 12</p>
+            <p><strong>Ціна:</strong> 47,00 грн.</p>
+            <p><strong>Статус:</strong> <span class="status">є у наявності</span></p>
+            <label>Кількість, шт.:</label>
+            <input type="number" min="1">
+        </div>
+        <div class="product-card">
+            <img src="https://chaipotutory.com.ua/images/Product/%D0%A8%D0%BD%D1%96%D1%82.jpg" alt="Сіль з травами">
+            <h3>Шніт*            </h3>
+           <p><strong>Маса:</strong> 14</p>
+            <p><strong>Ціна:</strong> 47,00 грн.</p>
+            <p><strong>Статус:</strong> <span class="status">є у наявності</span></p>
+            <label>Кількість, шт.:</label>
+            <input type="number" min="1">
+        </div>
+        <div class="product-card">
+            <img src="https://chaipotutory.com.ua/images/Product/%D0%9A%D1%80%D1%96%D0%BF.jpg" alt="Сіль з травами">
+            <h3>Кріп</h3>
+            <p><strong>Маса:</strong> 47</p>
+            <p><strong>Ціна:</strong> 33,00 грн.</p>
+            <p><strong>Статус:</strong> <span class="status">є у наявності</span></p>
+            <label>Кількість, шт.:</label>
+            <input type="number" min="1">
+        </div>
+        <!-- Інші продукти спецій додати тут -->
+    </div>
+</div>
+</body>
+</html>

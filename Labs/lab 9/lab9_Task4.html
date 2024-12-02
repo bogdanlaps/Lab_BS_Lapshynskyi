@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модальне вікно з прокручуванням</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .modal-content {
+            border-radius: 8px;
+        }
+        .modal-header {
+            border-bottom: 1px solid #ddd;
+        }
+        .modal-footer {
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#largeModal">
+    Відкрити велике модальне вікно
+</button>
+
+<div class="modal fade" id="largeModal" tabindex="-1" aria-labelledby="largeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title" id="largeModalLabel">Цікаве модальне вікно</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <h4>Проект "Цікаві Факти"</h4>
+                <p>Це модальне вікно з класами <strong>modal-lg</strong> і <strong>modal-dialog-scrollable</strong>, що дозволяє прокручувати вміст вікна, якщо він перевищує висоту екрана. Давайте дізнаємося кілька цікавих фактів!</p>
+
+                <h5>1. Найбільший організм у світі</h5>
+                <p>Найбільший організм на Землі — це гриб, що росте під лісом в Орегоні, США. Його розміри займають більше 3.5 квадратних миль (близько 9 квадратних кілометрів). Це один з найстаріших живих організмів на планеті!</p>
+
+                <h5>2. Найглибша точка океану</h5>
+                <p>Найглибша точка океану — це Марианська западина, розташована на глибині понад 11 км у Тихому океані. Це місце відоме своїми екстремальними умовами і являє собою справжню таємницю для науковців.</p>
+
+                <h5>3. Секрети людської свідомості</h5>
+                <p>Людський мозок є настільки складним, що навіть сьогодні вчені не розуміють повністю, як саме працює свідомість. Ця частина мозку здатна створювати та обробляти думки, емоції і навіть спогади, при цьому залишаючи без відповіді багато питань.</p>
+
+                <h5>4. Всесвіт і його нескінченність</h5>
+                <p>Всі зірки і галактики, які ми бачимо через телескопи, можуть бути лише маленькою частиною космосу. І хоча науковці досі не знають точних розмірів Всесвіту, більшість вчених вважає, що він нескінченний!</p>
+
+                <h5>5. Найбільша пустеля на Землі</h5>
+                <p>Хоча ми звикли асоціювати пустелі з гарячими і сухими місцями, найбільша пустеля на Землі — це Антарктида. Вона не має піску, але її клімат настільки суворий, що вона теж вважається пустелею, бо отримує мінімум опадів.</p>
+
+                <h5>6. Дивовижні можливості океанів</h5>
+                <p>Океани Землі містять понад 80% живих організмів нашої планети. Ще більше вражає той факт, що лише 5% океанів досліджено людьми. Це залишає безліч можливостей для відкриттів та досліджень у майбутньому.</p>
+
+                <h5>7. Необмежені можливості інтернету</h5>
+                <p>Інтернет сьогодні є основою комунікацій, науки, торгівлі і багатьох інших сфер. Прогнозується, що кількість підключених пристроїв до Інтернету може перевищити кількість населення планети вже в найближчі роки.</p>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрити</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table #1. Country of Western Europe - Colorful Tables</title>
+    <style>
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .table th, .table td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        .table th {
+            background-color: #333; /* Темний фон для заголовків */
+            color: white; /* Білий текст для заголовків */
+        }
+
+        /* Підсвітка рядків при наведенні */
+        .table-hover tbody tr:hover {
+            background-color: #ffcc00; /* Яскраво-жовтий фон при наведенні */
+            color: black; /* Чорний текст при наведенні */
+        }
+
+        /* Кольорові класи для рядків */
+        .table-primary {
+            background-color: #007bff; /* Синій */
+            color: white;
+        }
+        .table-success {
+            background-color: #28a745; /* Зелений */
+            color: white;
+        }
+        .table-danger {
+            background-color: #dc3545; /* Червоний */
+            color: white;
+        }
+        .table-info {
+            background-color: #17a2b8; /* Світло-блакитний */
+            color: white;
+        }
+        .table-warning {
+            background-color: #ffc107; /* Жовтий */
+            color: black;
+        }
+        .table-secondary {
+            background-color: #6c757d; /* Сірий */
+            color: white;
+        }
+        .table-light {
+            background-color: #f8f9fa; /* Світло-сірий */
+            color: black;
+        }
+        .table-dark {
+            background-color: #343a40; /* Темний */
+            color: white;
+        }
+
+        /* Обрамлення комірок */
+        .table-bordered th, .table-bordered td {
+            border: 2px solid #000; /* Товсті обрамлення */
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="header">Table #1. Country of Western Europe</h1>
+    
+    <!-- Таблиця з підсвіткою рядків -->
+    <h2>Таблиця з підсвіткою рядків</h2>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Surface Area</th>
+                <th>Indep Year</th>
+                <th>Population</th>
+                <th>Government Form</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>AUT</td>
+                <td>Austria</td>
+                <td>83859</td>
+                <td>1918</td>
+                <td>8091800</td>
+                <td>Federal Republic</td>
+            </tr>
+            <tr>
+                <td>BEL</td>
+                <td>Belgium</td>
+                <td>30518</td>
+                <td>1830</td>
+                <td>10239000</td>
+                <td>Constitutional Monarchy, Federation</td>
+            </tr>
+            <tr>
+                <td>FRA</td>
+                <td>France</td>
+                <td>551500</td>
+                <td>843</td>
+                <td>59225700</td>
+                <td>Republic</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Таблиця з кольором .table-primary -->
+    <h2>Таблиця з кольором .table-primary</h2>
+    <table class="table table-bordered table-primary">
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Surface Area</th>
+                <th>Indep Year</th>
+                <th>Population</th>
+                <th>Government Form</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>AUT</td>
+                <td>Austria</td>
+                <td>83859</td>
+                <td>1918</td>
+                <td>8091800</td>
+                <td>Federal Republic</td>
+            </tr>
+            <tr>
+                <td>BEL</td>
+                <td>Belgium</td>
+                <td>30518</td>
+                <td>1830</td>
+                <td>10239000</td>
+                <td>Constitutional Monarchy, Federation</td>
+            </tr>
+            <tr>
+                <td>FRA</td>
+                <td>France</td>
+                <td>551500</td>
+                <td>843</td>
+                <td>59225700</td>
+                <td>Republic</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Таблиця з кольором .table-success -->
+    <h2>Таблиця з кольором .table-success</h2>
+    <table class="table table-bordered table-success">
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Surface Area</th>
+                <th>Indep Year</th>
+                <th>Population</th>
+                <th>Government Form</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>AUT</td>
+                <td>Austria</td>
+                <td>83859</td>
+                <td>1918</td>
+                <td>8091800</td>
+                <td>Federal Republic</td>
+            </tr>
+            <tr>
+                <td>BEL</td>
+                <td>Belgium</td>
+                <td>30518</td>
+                <td>1830</td>
+                <td>10239000</td>
+                <td>Constitutional Monarchy, Federation</td>
+            </tr>
+            <tr>
+                <td>FRA</td>
+                <td>France</td>
+                <td>551500</td>
+                <td>843</td>
+                <td>59225700</td>
+                <td>Republic</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Таблиця з кольором .table-danger -->
+    <h2>Таблиця з кольором .table-danger</h2>
+    <table class="table table-bordered table-danger">
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Surface Area</th>
+                <th>Indep Year</th>
+                <th>Population</th>
+                <th>Government Form</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>AUT</td>
+                <td>Austria</td>
+                <td>83859</td>
+                <td>1918</td>
+                <td>8091800</td>
+                <td>Federal Republic</td>
+            </tr>
+            <tr>
+                <td>BEL</td>
+                <td>Belgium</td>
+                <td>30518</td>
+                <td>1830</td>
+                <td>10239000</td>
+                <td>Constitutional Monarchy, Federation</td>
+            </tr>
+            <tr>
+                <td>FRA</td>
+                <td>France</td>
+                <td>551500</td>
+                <td>843</td>
+                <td>59225700</td>
+                <td>Republic</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
